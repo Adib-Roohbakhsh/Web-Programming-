@@ -1,0 +1,38 @@
+
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;   
+    justify-content: space-between;
+  }
+  .logo{ 
+    background-color: #f00;
+    color: #fff;
+}
+
+  .container{
+display: flex;
+flex-direction: row;
+  }
+
+  .video-section {
+    flex-grow: 3;
+  }
+
+  .nav-section{
+flex-grow: 1;  
+}
+.nav-list{
+    display: flex;
+    flex-direction: column;
+}
+  img { 
+    width: 200px;
+    height: 100px;
+  }
+  .video-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }

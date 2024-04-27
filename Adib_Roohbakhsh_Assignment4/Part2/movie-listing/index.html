@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Movie List</title>
+  </head>
+  <body>
+    <div class="add-movie">
+      <input name="title" id="title-input" type="text" placeholder="Title" />
+      <button id="add-movie-btn">Serch</button>
+    </div>
+
+    <div>
+      <select id="year-filter">
+      </select>
+      <select id="rank-filter">
+        <option value="ascending">Ascending</option>
+        <option value="descending">Descending</option>
+      </select>
+    </div>
+
+    <div class="movies"></div>
+  </body>
+  <script src="index.js" type="module"></script>
+</html>
