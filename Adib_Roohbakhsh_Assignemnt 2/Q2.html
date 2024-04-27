@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Information Form</title>
+  <style>
+    
+
+    form {
+      width: 400px;
+      margin: 10px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+
+    label {
+      margin-bottom: 5px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    select {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      margin-top: 5px;
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+    
+  </style>
+</head>
+<body>
+  <form id="userForm" onsubmit="submitForm(event)">
+    <h1>FORM</h1>
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required>
+
+    <label for="birthYear">Birth Year:</label>
+    <input type="number" id="birthYear" name="birthYear" required>
+
+    <label for="bio">Bio:</label>
+    <textarea id="bio" name="bio" required></textarea>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="preferNotToSay">Prefer not to say</option>
+    </select>
+
+    <label for="imageUrl">Image URL:</label>
+    <input type="url" id="imageUrl" name="imageUrl">
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="userInfo"></div>
+
+  <script>
+    function submitForm(event) {
+      event.preventDefault();
+      const firstName = document.getElementById('firstName').value;
+      const lastName = document.getElementById('lastName').value;
+      const birthYear = parseInt(document.getElementById('birthYear').value);
+      const bio = document.getElementById('bio').value;
+      const email = document.getElementById('email').value;
+      const gender = document.getElementById('gender').value;
+      const imageUrl = document.getElementById('imageUrl').value;
+      const age = new Date().getFullYear() - birthYear;
+
+      let userInfoHTML = `
+<div style="width:50%;margin:auto;border: 1px solid #ccc;padding:15px">
+        <h2>Submitted Details</h2>
+        <p>Name: ${firstName} ${lastName}</p>
+        <p>Age: ${age}</p>
+        <p>Bio: ${bio}</p>
+        <p>Email: ${email}</p>
+        <p>Gender: ${gender}</p>
+      `;
+
+      if (imageUrl) {
+        userInfoHTML += `<img src="${imageUrl}" class="profile-picture">`;
+      } else {
+        userInfoHTML += `<p>No image is provided</p>`;
+      }
+userInfoHTML+= "</div>"
+      document.getElementById('userInfo').innerHTML = userInfoHTML;
+    }
+  </script>
+</body>
+</html>
