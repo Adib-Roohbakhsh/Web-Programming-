@@ -1,0 +1,28 @@
+.post-container {
+  background-color: rgb(124, 124, 124);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  width: 450px;
+  height: auto;
+  border: 2px solid black;
+  border-radius: 30px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.post-title {
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.post-body {
+  font-size: larger;
+}
+
+.post-date {
+  font-size: large;
+}

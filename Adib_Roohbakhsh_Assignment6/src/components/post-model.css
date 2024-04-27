@@ -1,0 +1,42 @@
+.post-model-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.post-model-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input,
+textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+}
+
+.add-buttun {
+  padding: 10px 20px;
+  background-color: rgb(231, 93, 0);
+  color: whitesmoke;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+}
+
+.close-buttun {
+  margin: 10px;
+  background-color: rgb(231, 67, 49);
+  position: fixed;
+  top: 0;
+  right: 0;
+}
