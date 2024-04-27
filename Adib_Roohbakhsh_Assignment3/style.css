@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+#calculator {
+  background-color: rgb(209, 209, 209);
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  border: 1px solid;
+  border-radius: 20px;
+}
+button {
+  font-size: 18px;
+  padding: 10px;
+  margin: 10px;
+  width: 40px;
+  height: 40px;
+}
+#display {
+  width: 250px;
+  height: 40px;
+}
